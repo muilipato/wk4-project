@@ -11,8 +11,10 @@ body{
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
+    max-width:900px;
     width: 100%;
-    max-width: 300px;
+   
+    
     font-family: sans-serif;
     border-bottom: 10px solid greenyellow;
 
@@ -30,14 +32,27 @@ color:rgb(18, 84, 158);
  border-bottom: 4px solid black;
  border-radius: 15px;
 }
-#column {
-    float: left;
-    width: 33.33%;
+#search-container{
+    margin-left: 600px;
+    margin-top: 20px;
 }
-#row:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
+
+.London-details{
+
+    background-color: darkgrey;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 600px;
+    
+    font-family: sans-serif;
+    border-bottom: 10px solid greenyellow;
+
+
+}
+
   
 
