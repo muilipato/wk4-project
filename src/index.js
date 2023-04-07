@@ -61,32 +61,3 @@ document.getElementById("submit-search").addEventListener("click", function (){
   anyCity(searchingFor);
 }) 
 
- 
-
-/*
-const API_KEY = '0a6fb4377e8f4853270b1861c18cfecd';
-const location = 'New York';
-const forecastDays = 3;
-
-fetch(`https://api.weatherstack.com/current?access_key=${API_KEY}&query=${location}`)
-  .then(response => response.json())
-  .then(data => {
-    // Do something with the data  
-    console.log(data);
-  })
-  .catch(error => {
-    // Handle errors
-    console.error(error);
-  });
-
-fetch(`http://api.weatherstack.com/forecast?access_key=${API_KEY}&query=${location}&forecast_days=${forecastDays}`)
-  .then(response => response.json())
-  .then(data => {
-    // Do something with the data
-    console.log(data);
-  })
-  .catch(error => {
-    // Handle errors
-    console.error(error);
-  });
-*/

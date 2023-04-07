@@ -24,7 +24,15 @@ body{
     font-size:60px;
 color:rgb(18, 84, 158);
 }
+#nbo{
+    font-size:60px;
+color:rgb(18, 84, 158);
+}
 #temp{
+    font-size: 50px;
+    font-weight: 700;
+}
+#nbo-temp{
     font-size: 50px;
     font-weight: 700;
 }
