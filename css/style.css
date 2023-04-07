@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(63, 60, 53);
+}
+
+.weather-details{
+
+    background-color: darkgrey;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 300px;
+    font-family: sans-serif;
+    border-bottom: 10px solid greenyellow;
+
+
+}
+#city-name{
+    font-size:60px;
+color:rgb(18, 84, 158);
+}
+#temp{
+    font-size: 50px;
+    font-weight: 700;
+}
+#line{
+ border-bottom: 4px solid black;
+ border-radius: 15px;
+}
+#column {
+    float: left;
+    width: 33.33%;
+}
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+  
+
