@@ -61,3 +61,27 @@ document.getElementById("submit-search").addEventListener("click", function (){
   anyCity(searchingFor);
 }) 
 
+function majorCities(columnId,city){
+  fetch(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${city}&days=3`, options)
+	  .then(response => response.json())
+  
+	  .then(data => {
+      let column=document.querySelector(`.${columnId}`)
+      container = column.querySelector(".myCities");
+      container.querySelector("#city-name").innerHTML=`${data.location.name}`;
+      container.querySelector("#temp").innerHTML = `${data.current.temp_c} °C`;
+
+      let clouds_container = container.querySelector("#cloud-cover");
+      clouds_container.querySelector("#clouds").innerHTML=data.current.condition.text;
+      clouds_container.querySelector(".cloud-icon").src =data.current.condition.icon;
+      container.querySelector("#wind").innerHTML =`Wind Speed: ${data.current.wind_kph} km/h`;
+      
+    })
+    
+	  .catch(err => console.error(err));
+   
+
+}
+majorCities("city1","Tokyo");
+majorCities("city2","New York");
+majorCities("city3","London");
