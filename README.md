@@ -13,4 +13,8 @@ The weather data will be displayed on the page, including the current temperatur
 This application uses the RapidAPI weather API to retrieve weather data. To use this API in your own projects, one has to create an account on the RapidAPI website and subscribe to the weather API. Once you have subscribed, you can obtain an API key that you can use to make requests to the API.
 It stores the structured data using JSON format. 
 
+This project is licensed under the terms of the [MIT license](LICENSE)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
