@@ -1,4 +1,10 @@
 # wk4-project
+# Author 
+
+Patrick Maweu 
+
+github: https://github.com/muilipato
+
 # Weather Web Application
 This is a weather web application that provides real-time weather data and forecasts for cities and towns around the world. The application uses the RapidAPI weather API: https://rapidapi.com/weatherapi/api/weatherapi-com/.
 
