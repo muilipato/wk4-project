@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function(){
 const options = {
 	method: 'GET',
 	headers: {
@@ -20,6 +21,24 @@ const getWeather = (city)=>{
       document.getElementById("nbo-wind").innerHTML =`Wind Speed: ${data.current.wind_kph} km/h`;
       
       
+      let myCity=document.querySelector("#nbo");
+
+      // Display additional information when a user hovers over the city name
+
+      myCity.addEventListener('mouseover', ()=>{
+        let description =document.createElement('p');
+        description.setAttribute('id','description');
+        description.textContent=`Country: ${data.location.country}, Last updated: ${data.location.localtime}`;
+        myCity.appendChild(description);
+    
+      })
+      //Remove the additional information when the cursor is moved elsewhere.
+      myCity.addEventListener('mouseout',()=>{
+        let description=document.querySelector('#description');
+        description.setAttribute('id','description');
+        myCity.removeChild(description);
+      });
+      
 
     })
     
@@ -30,6 +49,8 @@ const getWeather = (city)=>{
 }
 function displayWeather(){
   getWeather('Nairobi')
+ 
+  
 }
 displayWeather();
 const anyCity = (city)=>{
@@ -44,6 +65,24 @@ const anyCity = (city)=>{
       document.getElementById("clouds").innerHTML=data.current.condition.text;
       document.querySelector(".cloud-icon").src =data.current.condition.icon;
       document.getElementById("wind").innerHTML =`Wind Speed: ${data.current.wind_kph} km/h`;
+      
+      let myCity=document.querySelector("#city-name");
+
+      // Display additional information when a user hovers over the city name
+
+      myCity.addEventListener('mouseover', ()=>{
+        let description =document.createElement('p');
+        description.setAttribute('id','city-description');
+        description.textContent=`Country: ${data.location.country}, Last updated: ${data.location.localtime}`;
+        myCity.appendChild(description);
+    
+      })
+      //Remove the additional information when the cursor is moved elsewhere.
+      myCity.addEventListener('mouseout',()=>{
+        let description=document.querySelector('#city-description');
+        description.setAttribute('id','city-description');
+        myCity.removeChild(description);
+      });
       
       
 
@@ -75,6 +114,24 @@ function majorCities(columnId,city){
       clouds_container.querySelector("#clouds").innerHTML=data.current.condition.text;
       clouds_container.querySelector(".cloud-icon").src =data.current.condition.icon;
       container.querySelector("#wind").innerHTML =`Wind Speed: ${data.current.wind_kph} km/h`;
+     
+     
+      let majorCity = container.querySelector("#city-name");
+      // Display additional information when a user hovers over the city name
+
+      majorCity.addEventListener('mouseover', ()=>{
+        let description =document.createElement('p');
+        description.setAttribute('id','city-description');
+        description.textContent=`Country: ${data.location.country}, Last updated: ${data.location.localtime}`;
+        majorCity.appendChild(description);
+    
+      })
+      //Remove the additional information when the cursor is moved elsewhere.
+      majorCity.addEventListener('mouseout',()=>{
+        let description=document.querySelector('#city-description');
+        description.setAttribute('id','city-description');
+        majorCity.removeChild(description);
+      });
       
     })
     
@@ -85,3 +142,4 @@ function majorCities(columnId,city){
 majorCities("city1","Tokyo");
 majorCities("city2","New York");
 majorCities("city3","London");
+});

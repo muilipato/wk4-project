@@ -24,10 +24,35 @@ body{
 #city-name{
     font-size:60px;
 color:rgb(18, 84, 158);
+position: relative;
 }
+#city-description{
+    position: absolute;
+    font-size: small;
+    color:black;
+    font-style: italic;
+    
+  
+}
+
 #nbo{
     font-size:60px;
-color:rgb(18, 84, 158);
+    color:rgb(18, 84, 158);
+    position: relative;
+    
+}
+#nbo:hover{
+    cursor: pointer;
+    
+}
+#description{
+    font-size: small;
+    color:black;
+    font-style: italic;
+    position: absolute;
+    left:70%;
+    top: 10%;
+   
 }
 #temp{
     font-size: 50px;
